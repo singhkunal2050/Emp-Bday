@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    min-height: 100vh;
+    border: 2px saddlebrown solid;
+}
+
+.hero-section{
+    background-image: url(./img/patternpad.jpeg);
+    background-color: rgba(255, 255, 255, 0.973);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
