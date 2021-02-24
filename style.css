@@ -52,6 +52,7 @@ section{
 .hero-section p{
     font-size: 1.5em;
     font-size: clamp(1em , 2vw , 1.5em);
+    margin-top: 10px;
 }
 
 .greeting-section{
@@ -60,6 +61,8 @@ section{
     background-blend-mode: lighten;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 
