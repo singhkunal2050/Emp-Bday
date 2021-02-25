@@ -13,7 +13,7 @@ class Firework {
         this.pos = new Vec(this.rnd.int(0, this.app.w), this.app.h + 40);
         this.vel = new Vec(0, -this.rnd.real(16.0, this.app.h / 40));
         this.acc = new Vec(0, 0);
-        this.size = this.rnd.real(0.25, 5.0);
+        this.size = this.rnd.real(0.25, 2.5);
         this.emoji = this.rnd.pick(this.app.emojis);
     }
     applyForce(f) {
@@ -25,8 +25,8 @@ class Firework {
         this.pos.add(this.vel);
         if (this.vel.y > 1) {
             this.bursting = true;
-            const maxBursts = Math.floor(this.app.w / 4);
-            const numBursts = this.rnd.chance(5) ? this.rnd.int(100, maxBursts) : this.rnd.int(20, 80);
+            const maxBursts = 40;
+            const numBursts = this.rnd.chance(5) ? this.rnd.int(10, maxBursts) : this.rnd.int(20, 30);
             for (let i = 1; i < numBursts; i++) {
                 this.bursts.push(new Burst(this.pos, this));
             }
