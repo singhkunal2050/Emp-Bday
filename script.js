@@ -13,7 +13,7 @@ class Firework {
         this.pos = new Vec(this.rnd.int(0, this.app.w), this.app.h + 40);
         this.vel = new Vec(0, -this.rnd.real(16.0, this.app.h / 40));
         this.acc = new Vec(0, 0);
-        this.size = this.rnd.real(0.25, 2.5);
+        this.size = this.rnd.real(0.5, 2.5);
         this.emoji = this.rnd.pick(this.app.emojis);
     }
     applyForce(f) {
@@ -110,7 +110,7 @@ class App {
         this.forces = {
             gravity: new Vec(0, 0.25)
         };
-        this.emojis = ['😊', '🍕', '💩', '☘', '👀', '🐟', '💥', '⚡️', '🍉', '🍟', '⚽️'];
+        this.emojis = ['😊', '🍕', '👻', '😍', '👀', '🐟', '💥', '⚡️', '🎉', '🎈', '🥳'];
         window.requestAnimationFrame((t) => { this.draw(t); });
         log(this);
     }
