@@ -44,9 +44,10 @@ section{
     width: 90%;
 }
 
-.hero-section h1{
+/* .hero-section */
+ h1{
     /* font-size: 5em; */
-    font-size: clamp(3em , 5vw , 5em);
+    font-size: clamp(2em , 5vw , 5em);
 }
 
 .hero-section p{
@@ -62,8 +63,13 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
+
+
 
 
 @media(max-width:768px){
