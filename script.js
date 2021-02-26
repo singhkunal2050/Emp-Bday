@@ -25,7 +25,7 @@ class Firework {
         this.pos.add(this.vel);
         if (this.vel.y > 1) {
             this.bursting = true;
-            const maxBursts = 40;
+            const maxBursts = 35;
             const numBursts = this.rnd.chance(5) ? this.rnd.int(10, maxBursts) : this.rnd.int(20, 30);
             for (let i = 1; i < numBursts; i++) {
                 this.bursts.push(new Burst(this.pos, this));
@@ -115,7 +115,7 @@ class App {
         this.rnd = new Random();
         this.fireworks = [];
         this.forces = {
-            gravity: new Vec(0, 0.25)
+            gravity: new Vec(0, .25)
         };
         this.emojis = ['🎺', '🎁', '👻', '😍', '👀', '🤪', '💥', '⚡️', '🎉', '🎈', '🥳'];
         window.requestAnimationFrame((t) => { this.draw(t); });
@@ -135,7 +135,7 @@ class App {
     draw(t) {
         this.clearIt();
         window.requestAnimationFrame((t) => { this.draw(t); });
-        if (this.rnd.chance(this.w / 80)) {
+        if (this.rnd.chance(this.w / 200)) {
             this.fireworks.push(new Firework(this));
         }
         this.fireworks.forEach(f => {
