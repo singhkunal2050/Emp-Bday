@@ -10,13 +10,30 @@
     transition: 350ms ease-in-out;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
 section{
     min-height: 100vh;
     padding: 0 60px;
 }
 
-
+button{
+    margin: 10px 0;
+    padding: 15px 10px;
+    border-radius: 24px;
+    border: none;
+    background: #724cd3 ;
+    color: white;
+    font-weight: bold;
+}
 
 .hero-section{
     background-image: url(./img/patternpad.jpeg);
@@ -42,6 +59,7 @@ section{
 
 .hero-image img{
     width: 90%;
+    border-radius: 16px;
 }
 
 /* .hero-section */
@@ -68,6 +86,82 @@ section{
     align-items: center;
 
 }
+
+
+.card,
+.envelope {
+  background: #fff;
+  box-shadow: -1px 8px 3px 0 rgba(0, 0, 0, 0.6);
+  max-width: 50vw;
+  padding: 2em;
+  position: relative;
+}
+
+.card h1{
+    font-size: clamp(2em , 4vw , 5em);
+}
+
+@media(max-width:768px){
+    .card,
+    .envelope {
+      max-width: 80vw;
+    }
+}
+
+@keyframes heart-beat{
+    0%{
+        transform: scale(1.1);
+    }
+    20%{
+        transform: scale(1.2);
+    }
+    40%{
+        transform: scale(1.4);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+em {
+  color: #cc2119;
+  font-style: normal;
+  
+}
+
+.heart {
+  bottom: 4em;
+  position: absolute;
+  right: 4em;
+  transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: heart-beat;
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
+}
+
+.heart::before,
+.heart::after {
+  background-color: #cd231b;
+  border-radius: 50px 50px 0 0;
+  content: "";
+  height: 25px;
+  left: 15px;
+  position: absolute;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 15px;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
 
 
 

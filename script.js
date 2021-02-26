@@ -39,6 +39,7 @@ class Firework {
             ctx.save();
             ctx.font = "2em Arial red";
             ctx.fillStyle = 'white';
+            ctx.textAlign = "start";
             ctx.fillText("Hello World", 100, 210);
             ctx.fillStyle = this.color;
             ctx.font = `${this.size}em sans-serif`;
@@ -110,7 +111,7 @@ class App {
         this.forces = {
             gravity: new Vec(0, 0.25)
         };
-        this.emojis = ['😊', '🍕', '👻', '😍', '👀', '🐟', '💥', '⚡️', '🎉', '🎈', '🥳'];
+        this.emojis = ['🎺', '🎁', '👻', '😍', '👀', '🤪', '💥', '⚡️', '🎉', '🎈', '🥳'];
         window.requestAnimationFrame((t) => { this.draw(t); });
         log(this);
     }
