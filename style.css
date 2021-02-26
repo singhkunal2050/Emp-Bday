@@ -26,13 +26,19 @@ section{
 }
 
 button{
-    margin: 10px 0;
-    padding: 15px 10px;
-    border-radius: 24px;
     border: none;
-    background: #724cd3 ;
     color: white;
     font-weight: bold;
+}
+
+button a{
+    border-radius: 22px;
+    background: #724cd3 ;
+    padding: 15px 10px;
+}
+
+#second{
+    background: #cd231b;
 }
 
 .hero-section{
@@ -66,6 +72,7 @@ button{
  h1{
     /* font-size: 5em; */
     font-size: clamp(2em , 5vw , 5em);
+    line-height: 1;
 }
 
 .hero-section p{

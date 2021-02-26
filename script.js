@@ -39,7 +39,7 @@ class Firework {
             ctx.save();
             ctx.font = "2em Arial red";
             ctx.fillStyle = 'white';
-            ctx.textAlign = "start";
+            ctx.textAlign = "center";
             ctx.fillText("Hello World", 100, 210);
             ctx.fillStyle = this.color;
             ctx.font = `${this.size}em sans-serif`;
