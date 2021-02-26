@@ -37,10 +37,16 @@ class Firework {
         if (!this.bursting) {
             this.update();
             ctx.save();
-            ctx.font = "2em Arial red";
+            ctx.font = "3em Montserrat red";
             ctx.fillStyle = 'white';
             ctx.textAlign = "center";
-            ctx.fillText("Hello World", 100, 210);
+            ctx.fillText("Happy Birthday",document.getElementById('cnv').width/2, document.getElementById('cnv').height/2);
+            ctx.font = "1em Arial red";
+            ctx.fillStyle = 'white';
+            ctx.textAlign = "center";
+            ctx.fillText("Wishing You Lots Of Success this Year!",document.getElementById('cnv').width/2, document.getElementById('cnv').height/2+40);
+            
+            
             ctx.fillStyle = this.color;
             ctx.font = `${this.size}em sans-serif`;
             ctx.fillText(this.emoji, this.pos.x, this.pos.y);
