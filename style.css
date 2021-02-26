@@ -112,7 +112,7 @@ p{
 @media(max-width:768px){
     .card,
     .envelope {
-      max-width: 80vw;
+      max-width: 90vw;
     }
 
     h1,p{
