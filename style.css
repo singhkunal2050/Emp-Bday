@@ -78,7 +78,8 @@ button a{
 p{
     font-size: 1.5em;
     font-size: clamp(1em , 2vw , 1.5em);
-    margin: 10px 0;
+    margin: 20px 0 !important;
+    text-align: justify;
 }
 
 .greeting-section{
@@ -113,6 +114,21 @@ p{
     .envelope {
       max-width: 80vw;
     }
+
+    h1,p{
+        text-align: center;
+    }
+
+    p{
+        margin: 20px;
+    }
+
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 }
 
 @keyframes heart-beat{
